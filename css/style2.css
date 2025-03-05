@@ -1,70 +1,169 @@
-
-img {
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     max-width: 100%;
-    height: auto;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Main Table - Ensure Full Width */
 .main-table {
     width: 100%;
     border-collapse: collapse;
 }
-.navigation {
+
+/* Header & Navigation */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    max-height: 50px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links li a {
     text-decoration: none;
+    color: #333;
     padding: 10px;
 }
 
+/* Mobile Navigation - Stack Items */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-
     .nav-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
+
+/* Banner Section */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Services Section */
 .services-container, .review-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-}
-
-.service-box, .review-box {
-    flex: 1 1 calc(50% - 20px); /* Two per row */
-    max-width: 100%;
+    gap: 20px;
+    padding: 20px;
     text-align: center;
 }
 
+.service-box, .review-box {
+    flex: 1 1 calc(50% - 20px); /* Two per row on larger screens */
+    max-width: 100%;
+}
+
+.service-box img, .review-box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Stack items in one column on smaller screens */
 @media (max-width: 600px) {
     .service-box, .review-box {
-        flex: 1 1 100%; /* Stack in one column */
+        flex: 1 1 100%; /* Full width for mobile */
     }
+}
+
+/* Reviews Section */
+.review-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    gap: 20px;
 }
 
 .footer-column {
-    flex: 1 1 100%; /* Stack each column */
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
+/* Contact Buttons - Fixed at Bottom */
+.fixed-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.call-btn {
+    background-color: #28a745;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+
+.location {
+    background-color: #007bff;
+}
+
+/* Make buttons smaller on small screens */
+@media (max-width: 480px) {
+    .fixed-contact {
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
