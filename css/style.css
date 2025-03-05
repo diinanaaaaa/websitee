@@ -1,23 +1,27 @@
-/* =============================
+/* ==========================
    🔹 General Styles
-============================= */
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #0a0a0a; /* Dark background */
+    background: #0a0a0a; /* Dark theme */
     color: white;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-    padding-top: 80px; /* Avoid content hiding behind the fixed header */
+    padding-top: 80px; /* Prevent content from hiding behind header */
 }
 
-/* =============================
-   🔹 Navigation Bar
-============================= */
+/* ==========================
+   🔹 Header & Navigation
+========================== */
 .header {
     position: fixed;
     top: 0;
@@ -66,7 +70,7 @@ body {
     border-bottom: 2px solid #ff0000;
 }
 
-/* Mobile Menu */
+/* Mobile Navigation */
 .menu-toggle {
     display: none;
     background: none;
@@ -76,9 +80,9 @@ body {
     cursor: pointer;
 }
 
-/* =============================
+/* ==========================
    🔹 Responsive Navigation (Mobile)
-============================= */
+========================== */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -89,6 +93,8 @@ body {
         flex-direction: column;
         width: 100%;
         text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
     }
 
     .navigation.active {
@@ -108,18 +114,18 @@ body {
     }
 }
 
-/* =============================
+/* ==========================
    🔹 Banner
-============================= */
+========================== */
 .banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* =============================
+/* ==========================
    🔹 Services Section
-============================= */
+========================== */
 .services-section {
     text-align: center;
     padding: 50px 20px;
@@ -138,7 +144,8 @@ body {
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Adjust width */
+    width: 100%;
+    max-width: 350px;
 }
 
 .service-box img {
@@ -152,16 +159,9 @@ body {
     font-weight: bold;
 }
 
-/* Responsive Services */
-@media (max-width: 768px) {
-    .service-box {
-        width: 100%;
-    }
-}
-
-/* =============================
+/* ==========================
    🔹 Reviews Section
-============================= */
+========================== */
 .review-section {
     text-align: center;
     padding: 50px 20px;
@@ -198,9 +198,9 @@ body {
     }
 }
 
-/* =============================
+/* ==========================
    🔹 Footer
-============================= */
+========================== */
 .footer {
     background: #111;
     padding: 40px 0;
@@ -237,9 +237,9 @@ body {
     margin-top: 10px;
 }
 
-/* =============================
+/* ==========================
    🔹 Contact Buttons (Fixed Bottom)
-============================= */
+========================== */
 .fixed-contact {
     position: fixed;
     bottom: 20px;
